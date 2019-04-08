@@ -36,13 +36,11 @@ public class EmployeeController {
     }
 
     public void login() {
-        Employee employee;
-
         System.out.println("Nhập vào tên tài khoản!");
         String account = scanner.nextLine();
         System.out.println("Nhập vào password:");
         String password = scanner.nextLine();
-        employee = model.login(account, password);
+        Employee employee = model.login(account, password);
         if (employee == null) {
             System.out.println("không tồn tại tài khoản trên!");
         } else {
