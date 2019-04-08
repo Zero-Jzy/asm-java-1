@@ -37,25 +37,25 @@ public class EmployeeController {
 
     public void login() {
         Employee employee;
-        while (true) {
-            System.out.println("Nhập vào tên tài khoản!");
-            String account = scanner.nextLine();
-            System.out.println("Nhập vào password:");
-            String password = scanner.nextLine();
-            employee = model.login(account, password);
-            if (employee == null) {
-                System.out.println("không tồn tại tài khoản trên!");
-            } else {
-                System.out.println("Đăng nhập thành công.");
-                break;
-            }
-        }
-        System.out.println("-----Thông tin-----");
-        System.out.println("Tên           : " + employee.getName());
-        System.out.println("Tên tài khoản : " + employee.getAccount());
-        System.out.println("Email         : " + employee.getEmail());
-        System.out.println("Địa chỉ        : " + employee.getAddress());
-        System.out.println("Ngày tạo      : " + employee.getCreatedAt());
 
+        System.out.println("Nhập vào tên tài khoản!");
+        String account = scanner.nextLine();
+        System.out.println("Nhập vào password:");
+        String password = scanner.nextLine();
+        employee = model.login(account, password);
+        if (employee == null) {
+            System.out.println("không tồn tại tài khoản trên!");
+        } else {
+            System.out.println("Đăng nhập thành công.");
+            System.out.println("-----Thông tin-----");
+            System.out.println("Tên           : " + employee.getName());
+            System.out.println("Tên tài khoản : " + employee.getAccount());
+            System.out.println("Email         : " + employee.getEmail());
+            System.out.println("Địa chỉ        : " + employee.getAddress());
+            System.out.println("Ngày tạo      : " + employee.getCreatedAt());
+        }
     }
+
+
 }
+

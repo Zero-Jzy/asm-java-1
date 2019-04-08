@@ -19,19 +19,19 @@ public class UntilMenu {
             System.out.println("3. Thoát chương trình.");
             System.out.println("---------------------------------");
             System.out.println("Nhập lựa chọn của bạn: ");
-            int choice = scanner.nextInt();
+            String choice = scanner.next();
             scanner.nextLine();
 
-            if (choice == 3) {
+            if (choice == "3") {
                 System.out.println("Hẹn gặp lại.");
                 break;
             }
 
             switch (choice) {
-                case 1:
+                case "1":
                     controller.register();
                     break;
-                case 2:
+                case "2":
                     controller.login();
                     break;
                 default:
